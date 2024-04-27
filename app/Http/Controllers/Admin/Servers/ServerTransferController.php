@@ -30,12 +30,12 @@ class ServerTransferController extends Controller
     ) {
     }
 
-    private function notify(Server $server, Plain $token): void
+    private function notify(Server $server, Node $targetNode, Plain $token): void
     {
         try {
             Http::daemon($server->node)->post(sprintf('/api/servers/%s/transfer', $server->uuid), [
                 'server_id' => $server->uuid,
-                'url' => $server->node->getConnectionAddress() . '/api/transfers',
+                'url' => $targetNode->getConnectionAddress() . '/api/transfers',
                 'token' => 'Bearer ' . $token->toString(),
                 'server' => [
                     'uuid' => $server->uuid,
@@ -104,7 +104,7 @@ class ServerTransferController extends Controller
                 ->handle($transfer->newNode, $server->uuid, 'sha256');
 
             // Notify the source node of the pending outgoing transfer.
-            $this->notify($server, $token);
+            $this->notify($server, $transfer->newNode, $token);
 
             return $transfer;
         });
