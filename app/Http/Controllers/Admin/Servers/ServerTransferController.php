@@ -33,9 +33,9 @@ class ServerTransferController extends Controller
     private function notify(Server $server, Plain $token): void
     {
         try {
-            Http::daemon($server->node)->post('/api/transfer', [
+            Http::daemon($server->node)->post(sprintf('/api/servers/%s/transfer', $server->uuid), [
                 'server_id' => $server->uuid,
-                'url' => $server->node->getConnectionAddress() . "/api/servers/$server->uuid/archive",
+                'url' => $server->node->getConnectionAddress() . '/api/transfers',
                 'token' => 'Bearer ' . $token->toString(),
                 'server' => [
                     'uuid' => $server->uuid,
