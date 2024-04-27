@@ -34,14 +34,12 @@ class ServerTransferController extends Controller
     {
         try {
             Http::daemon($server->node)->post('/api/transfer', [
-                'json' => [
-                    'server_id' => $server->uuid,
-                    'url' => $server->node->getConnectionAddress() . "/api/servers/$server->uuid/archive",
-                    'token' => 'Bearer ' . $token->toString(),
-                    'server' => [
-                        'uuid' => $server->uuid,
-                        'start_on_completion' => false,
-                    ],
+                'server_id' => $server->uuid,
+                'url' => $server->node->getConnectionAddress() . "/api/servers/$server->uuid/archive",
+                'token' => 'Bearer ' . $token->toString(),
+                'server' => [
+                    'uuid' => $server->uuid,
+                    'start_on_completion' => false,
                 ],
             ])->toPsrResponse();
         } catch (TransferException $exception) {
