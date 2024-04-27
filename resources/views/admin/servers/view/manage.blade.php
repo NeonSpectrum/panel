@@ -106,7 +106,7 @@
                     </div>
 
                     <div class="box-footer">
-                        @if(!$canTransfer)
+                        @if($canTransfer)
                             <button class="btn btn-success" data-toggle="modal" data-target="#transferServerModal">Transfer Server</button>
                         @else
                             <button class="btn btn-success disabled">Transfer Server</button>

@@ -32,6 +32,8 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
  * @property int $daemon_listen
  * @property int $daemon_sftp
  * @property string $daemon_base
+ * @property int $sum_memory
+ * @property int $sum_disk
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  * @property \App\Models\Mount[]|\Illuminate\Database\Eloquent\Collection $mounts
@@ -60,9 +62,6 @@ class Node extends Model
      * The attributes excluded from the model's JSON form.
      */
     protected $hidden = ['daemon_token_id', 'daemon_token'];
-
-    public int $sum_memory;
-    public int $sum_disk;
 
     /**
      * Fields that are mass assignable.
