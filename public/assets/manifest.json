@@ -1,0 +1,30 @@
+{
+  "auth.js": {
+    "src": "/assets/auth.bf1af0b3.js",
+    "integrity": "sha384-uEWWFZfjnEBcNFXcvgkg/yYv10GA0x+eRd8+gAAstJCBNpckoG+4/WbyJhBLishT"
+  },
+  "dashboard.js": {
+    "src": "/assets/dashboard.e8d24f31.js",
+    "integrity": "sha384-HEVs7jl9g94qeBDaQvEkHX16kOK42Nq0vsZdAculJbBRi0i4cFUiHlz+p7AFXBSk"
+  },
+  "dashboard~server.js": {
+    "src": "/assets/dashboard~server.fac5b8b7.js",
+    "integrity": "sha384-Dk2H+mUmAYwnwOxydb4YCIxyaAlCqZQ8uKST8jvTdOEr8NrBWMUhb/d11sTF3j9s"
+  },
+  "main.js": {
+    "src": "/assets/bundle.a9fc4f1c.js",
+    "integrity": "sha384-8IAYkULw0orFLMXN5gUFrJTywJsHPyYBvHTdLtb7xccu17VgQjX8ZAgseZxtFk+T"
+  },
+  "server.js": {
+    "src": "/assets/server.1b997936.js",
+    "integrity": "sha384-QynRZMjEBnYtKaADVln1gS1n1N+otCWH8XeRXN7PhcW2dDX+HwkW1ztOr3aF3XfQ"
+  },
+  "vendors~auth~dashboard~server.js": {
+    "src": "/assets/vendors~auth~dashboard~server.4ed301e5.js",
+    "integrity": "sha384-a+TmjjVqlOg9ccphRdshU+0XuDOVoDZtyN9nbq44INlzSVPGvZ1un8Ianazi1jBb"
+  },
+  "vendors~dashboard~server.js": {
+    "src": "/assets/vendors~dashboard~server.f9e1933e.js",
+    "integrity": "sha384-iNvuiFWKAQmrnD9IUuwDfCSIV7fgzE+yO/sBXyOwnCW7266NJGSJhw2U8IP3ghly"
+  }
+}
